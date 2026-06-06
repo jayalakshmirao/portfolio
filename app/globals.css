@@ -1,0 +1,44 @@
+/* @import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f3efe6;
+  color: #111;
+  font-family: Georgia, serif;
+  line-height: 1.65;
+}
+
+a {
+  text-decoration: underline;
+}
+
+::selection {
+  background: #111;
+  color: white;
+} */
+
+/* ---claude */
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f3efe6;
+  color: #111;
+  font-family: Cormorant Garamon, serif;
+  line-height: 1.65;
+}
+
+a {
+  text-decoration: underline;
+}
+
+::selection {
+  background: #111;
+  color: #f3efe6;
+}
