@@ -1,52 +1,12 @@
-// import type { Metadata } from "next";
-// import "./globals.css";
-
-// export const metadata: Metadata = {
-//   title: "Jayalakshmi",
-//   description: "Payments Engineer × Writer",
-// };
-
-// export default function RootLayout({
-//   children,
-// }: {
-//   children: React.ReactNode;
-// }) {
-//   return (
-//     <html lang="en">
-//       <body>{children}</body>
-//     </html>
-//   );
-// }
-
-// ---claude
-// import type { Metadata } from "next";
-// import "./globals.css";
-
-// export const metadata: Metadata = {
-//   title: "Jayalakshmi",
-//   description: "Payments Engineer × Writer",
-// };
-
-// export default function RootLayout({
-//   children,
-// }: {
-//   children: React.ReactNode;
-// }) {
-//   return (
-//     <html lang="en">
-//       <body>{children}</body>
-//     </html>
-//   );
-// }
-// --claude latest
 import type { Metadata } from "next";
-import { Cinzel } from "next/font/google";
+import { Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
  
-const cinzel = Cinzel({
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["700", "900"],
-  variable: "--font-cinzel",
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
   display: "swap",
 });
  
@@ -61,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={cinzel.variable}>
+    <html lang="en" className={cormorant.variable}>
       <body>{children}</body>
     </html>
   );
