@@ -4,58 +4,55 @@ export default function Home() {
   return (
     <main className="min-h-screen">
  
-      <div className="grid lg:grid-cols-[44%_56%]">
+      {/* <div className="grid lg:grid-cols-[44%_56%]"> */}
+      <div className="grid grid-cols-1 lg:grid-cols-[44%_56%]">
 
         
  
         {/* ── LEFT ── */}
         {/* <section className="border-r-2 border-black pl-12 pt-12"> */}
- <section className="border-r-2 border-black pl-12 items-center pt-12">
-          {/* Name: same Cormorant Garamond, just very large */}
-          {/* <h1
-            style={{
-              fontFamily: "var(--font-cormorant), 'ITC Garamond Condensed', Cormorant Garamond, serif",
-              //fontSize: "clamp(0.5rem, 4vw, 4.5rem)",
-              fontSize: "3.25rem",
-              fontWeight: 800,
-              lineHeight: 1,
-              letterSpacing: "0.02px",
-              marginBottom: "1.5rem",
-              marginTop: "2.5rem",
-              marginLeft: "6.5rem",
-            }}
-          >
-            JAYALAKSHMI!
-          </h1> */}
-          <h1
+ {/* <section className="border-r-2 border-black pl-12 items-center pt-12"> */}
+  {/* change to make it responsive */}
+ <section className="border-b-2 lg:border-b-0 lg:border-r-2 border-black pt-8 lg:pt-12">
+          <h1  className="text-center lg:text-left lg:ml-[11rem]"
   style={{
     fontFamily: "'Rebus', serif",
-    fontSize: "2.8rem",
+    //fontFamily:  "var(--font-spicyRice)",
+    //fontSize: "2.8rem",
+    fontSize: "clamp(2rem, 6vw, 2.8rem)",
     fontWeight: 500,
-    marginTop: "0.2rem",
-    marginBottom: "0.2rem",
-    marginLeft: "6.5rem",
+    marginTop: "1.5rem",
+    marginBottom: "0.4rem",
+    //fontStyle: "italic",
+    //marginLeft: "3.5rem",
+    //textAlign: "center",
     lineHeight: 1.2,
+    letterSpacing: "-0.03em",
   }}
 >
-     JAYALAKSHMI!
+  {/* <div className="text-center lg:text-left lg:ml-[6.5rem]"> */}
+     JAYALAKSHMI
+     {/* </div> */}
 </h1>
  
           {/* Photo */}
-          <div style={{ paddingLeft: "4.5rem" }}>
+          {/* <div style={{ paddingLeft: "4.5rem" }}> */}
+          <div className="flex justify-center lg:block lg:pl-[8.5rem]">
             <Image
               src="/jay.jpeg"
               alt="Jayalakshmi"
               width={380}
               height={850}
+              className="border-2 border-black w-[75%] max-w-[880px] h-auto"
               style={{
                 border: "2px solid #111",
                // objectFit: "cover",
                 //objectPosition: "center top",
                 display: "block",
-                width: "79%",
+                //width: "79%", to make it responsive
                 //height: "80%",
-                height: "600px",
+                //height: "600px", to make it responsive
+                //className="border-2 border-black w-[75%] max-w-[380px] h-auto",
               }}
             />
           </div>
@@ -64,7 +61,8 @@ export default function Home() {
  
         {/* ── RIGHT ── */}
         <section
-          className="px-8 pt-6 pb-10"
+          //className="px-8 pt-6 pb-10" to make it responsive
+          className="px-6 lg:px-8 pt-6 pb-10"
           style={{
            fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
             // fontFamily: "var(--font-monospace), 'Roboto Mono', Georgia, serif",
@@ -80,21 +78,19 @@ export default function Home() {
               <p
     style={{
       fontFamily: "'Roboto Mono', monospace",
-      fontSize: "0.9rem",
-      letterSpacing: "-0.02rem",
+      //fontSize: "0.9rem", responsive
+      fontSize: "clamp(0.8rem, 1.8vw, 0.9rem)",
+      letterSpacing: "-0.01rem",
       marginBottom: "0.5rem",
     }}
   >
                 [ WHO ]
               </p>
-                {/* [ WHO ]
-              </p> */}
-              {/* <p>Hi, I'm Jayalakshmi. I'm fascinated by two things: how money moves, and how people move. One pays the bills. The other ends up on my Substack.</p> */}
-              {/* <p style={{ fontSize: "1.2rem", letterSpacing: "-1px", marginBottom: "0.001rem", fontWeight: 600 }}> */}
               <p
   style={{
     fontFamily: "'Rebus', serif",
-    fontSize: "1.1rem",
+    //fontSize: "1.1rem", to make it responsive
+    fontSize: "clamp(1rem, 2vw, 1.1rem)",
     lineHeight: 1.45,
     letterSpacing: "-0.02em",
     fontWeight: 500,
@@ -105,18 +101,10 @@ export default function Home() {
                 Hi, I'm Jayalakshmi. I'm fascinated by two things: how money moves, and how people move. One pays the bills. The other ends up on my Substack.
                 {/* I'm currently trying to keep money moving on the internet as a Senior Product Solutions Engineer at Juspay, working across payment infrastructure, merchant integrations, and operational systems. This little corner of the internet is where those worlds meet. */}
               </p>
-              {/* <p className="mt-3">
-                I'm fascinated by two things:<br />
-                how money moves,<br />
-                and how people move.
-              </p> */}
-              {/* <p className="mt-3">
-                One pays the bills.<br />
-                The other ends up on my Substack.
-              </p> */}
               <p style={{
     fontFamily: "'Rebus', serif",
-    fontSize: "1.1rem",
+    //fontSize: "1.1rem", responsive
+    fontSize: "clamp(1rem, 2vw, 1.1rem)",
     lineHeight: 1.45,
     letterSpacing: "-0.02em",
     fontWeight: 500,
@@ -125,7 +113,6 @@ export default function Home() {
   }}>
                 I'm currently trying to keep money moving on the internet as a Senior Product Solutions Engineer at Juspay, working across payment infrastructure, merchant integrations, and operational systems. This little corner of the internet is where those worlds meet.
               </p>
-              {/* <p className="mt-3">This little corner of the internet is where those worlds meet.</p> */}
             </div>
  
             {/* SAY HELLO */}
@@ -133,14 +120,15 @@ export default function Home() {
               <p
     style={{
       fontFamily: "'Roboto Mono', monospace",
-      fontSize: "0.9rem",
+      //fontSize: "0.9rem", Responsive
+      fontSize: "clamp(0.6rem, 1.8vw, 0.9rem)",
       letterSpacing: "-0.02rem",
       marginBottom: "0.1rem",
     }}
   >
                 [ SAY HELLO TO ME ]
               </p>
-              <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+              <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", fontFamily: "'Rebus', serif"}}>
                 {/* {["linkedin", "substack", "instagram", "github", "email"].map((l) => (
                   <a key={l} href="#" style={{ fontFamily: "'Rebus', serif" }}>{l}</a>
                 ))} */}
@@ -194,7 +182,8 @@ export default function Home() {
   <p
     style={{
       fontFamily: "'Roboto Mono', monospace",
-      fontSize: "0.9rem",
+      //fontSize: "0.9rem", responsive
+      fontSize: "clamp(0.8rem, 1.8vw, 0.9rem)",
       letterSpacing: "-0.01rem",
       marginBottom: "0.5rem",
     }}
@@ -204,7 +193,8 @@ export default function Home() {
      <ul
     style={{
       fontFamily: "'Rebus', serif",
-      fontSize: "1.1rem",
+      //fontSize: "1.1rem", responsive
+      fontSize: "clamp(1rem, 2vw, 1.1rem)",
       lineHeight: 1.2,
       letterSpacing: "-0.02em",
       fontWeight: 400,
@@ -258,7 +248,8 @@ export default function Home() {
               <p
     style={{
       fontFamily: "'Roboto Mono', monospace",
-      fontSize: "0.9rem",
+      //fontSize: "0.9rem", responsive
+      fontSize: "clamp(0.8rem, 1.8vw, 0.9rem)",
       letterSpacing: "-0.01rem",
       marginBottom: "0.5rem",
     }}
@@ -267,7 +258,8 @@ export default function Home() {
    <ul
     style={{
       fontFamily: "'Rebus', serif",
-      fontSize: "1.1rem",
+      //fontSize: "1.1rem", responsive
+      fontSize: "clamp(1rem, 2vw, 1.1rem)",
       lineHeight: 1.2,
       letterSpacing: "-0.02em",
       fontWeight: 400,
@@ -302,7 +294,7 @@ export default function Home() {
       </div>
  
       {/* FOOTER */}
-      <footer className="border-t-2 border-black mt-1 px-120 py-3">
+      <footer className="border-t-2 border-black mt-2 px-6 lg:px-120 py-4">
         <p style={{
           fontFamily: "'Rebus', serif",
           fontSize: "1rem",

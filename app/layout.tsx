@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
+import { Spicy_Rice } from "next/font/google";
+
+const spicyRice = Spicy_Rice({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-spicy",
+});
  
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -26,3 +33,8 @@ export default function RootLayout({
     </html>
   );
 }
+
+<html
+  lang="en"
+  className={`${cormorant.variable} ${spicyRice.variable}`}
+></html>
